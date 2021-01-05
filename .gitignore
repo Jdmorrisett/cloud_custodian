@@ -1,0 +1,10 @@
+# Ignore virtual environments
+**/venv/
+**/venv-dev/
+**/.env
+
+# Ignore VSCode files
+schema.json
+
+# Ignore output?
+**/output
