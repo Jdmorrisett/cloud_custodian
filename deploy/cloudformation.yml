@@ -1,0 +1,376 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    0e200a7d-8825-42b3-aac0-15338616870c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 490
+        'y': 218
+      z: 0
+      embeds: []
+      isassociatedwith:
+        - 8df740f6-0f54-420f-a1ff-3d7af0b23028
+    8df740f6-0f54-420f-a1ff-3d7af0b23028:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 620
+        'y': 220
+      z: 0
+      embeds: []
+    63596c7d-e1d5-4ea6-9559-a4d166cae8dd:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 670
+        'y': 340
+      z: 0
+      embeds: []
+      dependson:
+        - b6b77bcc-68bc-47a9-9d29-59900c1a3807
+        - 91564d55-f67d-42c5-b84e-93724deba215
+    91564d55-f67d-42c5-b84e-93724deba215:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 560
+        'y': 520
+      z: 0
+      embeds: []
+    b6b77bcc-68bc-47a9-9d29-59900c1a3807:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 720
+        'y': 470
+      z: 0
+      embeds: []
+    41f74a1e-ccbe-4407-888d-4d5a72416fe7:
+      size:
+        width: 120
+        height: 120
+      position:
+        x: 810
+        'y': 280
+      z: 0
+      embeds:
+        - 0582cbc5-11c8-45a0-a1ea-fb729928136c
+    0582cbc5-11c8-45a0-a1ea-fb729928136c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 830
+        'y': 320
+      z: 1
+      parent: 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+      embeds: []
+      iscontainedinside:
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+        - 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+      dependson:
+        - 63596c7d-e1d5-4ea6-9559-a4d166cae8dd
+    2b12ddd5-c0f1-48f2-b910-b46a35eaf265:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 570
+        'y': 340
+      z: 0
+      embeds: []
+      dependson:
+        - b6b77bcc-68bc-47a9-9d29-59900c1a3807
+        - 91564d55-f67d-42c5-b84e-93724deba215
+    347c40fb-c3ac-41c7-9519-5686b1be8b11:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 480
+        'y': 340
+      z: 0
+      embeds: []
+      dependson:
+        - b6b77bcc-68bc-47a9-9d29-59900c1a3807
+        - 91564d55-f67d-42c5-b84e-93724deba215
+    e30d6b77-2b6b-4f08-a860-978263db1268:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 320
+        'y': 470
+      z: 0
+      embeds: []
+      dependson:
+        - b6b77bcc-68bc-47a9-9d29-59900c1a3807
+        - 91564d55-f67d-42c5-b84e-93724deba215
+Resources:
+  CloudCustodianExecute:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      PolicyDocument: {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:CreateFunction",
+                "lambda:TagResource",
+                "ec2:DeleteSnapshot",
+                "cloudwatch:PutMetricData",
+                "ec2:DeleteTags",
+                "events:PutRule",
+                "lambda:GetFunctionConfiguration",
+                "lambda:CreateEventSourceMapping",
+                "lambda:UntagResource",
+                "lambda:PutFunctionConcurrency",
+                "ec2:DeleteVolume",
+                "logs:CreateLogStream",
+                "iam:PassRole",
+                "ec2:DescribeVolumeStatus",
+                "ec2:DescribeNetworkInterfaces",
+                "lambda:ListTags",
+                "ec2:DescribeVolumes",
+                "events:ListRules",
+                "lambda:DeleteFunction",
+                "events:ListTargetsByRule",
+                "events:PutEvents",
+                "events:DescribeRule",
+                "lambda:UpdateEventSourceMapping",
+                "logs:DescribeLogGroups",
+                "lambda:InvokeFunction",
+                "ec2:CreateTags",
+                "lambda:GetFunction",
+                "ec2:DeleteNetworkInterface",
+                "lambda:UpdateFunctionConfiguration",
+                "events:DescribeEventSource",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents",
+                "events:TestEventPattern",
+                "lambda:UpdateAlias",
+                "ec2:CreateNetworkInterface",
+                "events:TagResource",
+                "events:PutTargets",
+                "lambda:UpdateFunctionCode",
+                "lambda:AddPermission",
+                "lambda:GetFunctionEventInvokeConfig",
+                "events:ListTagsForResource",
+                "lambda:DeleteAlias",
+                "iam:ListAccountAliases",
+                "lambda:DeleteFunctionConcurrency",
+                "lambda:DeleteEventSourceMapping",
+                "lambda:RemovePermission",
+                "events:UntagResource",
+                "lambda:CreateAlias"
+            ],
+            "Resource": "*"
+          }
+        ]
+      }
+      Roles:
+        - !Ref CloudCustodian
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 0e200a7d-8825-42b3-aac0-15338616870c
+  CloudCustodian:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument: {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "Service": [
+                "ec2.amazonaws.com",
+                "lambda.amazonaws.com"
+              ]
+            },
+            "Action": [
+                "sts:AssumeRole"
+            ]
+          }
+        ]
+      }
+      Tags:
+        - Key: Service
+          Value: CloudCustodian
+        - Key: Owner
+          Value: !Ref owner
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 8df740f6-0f54-420f-a1ff-3d7af0b23028
+  C7NEBSDELETE:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Code:
+        ZipFile: | 
+          print "Test"
+      Description: cloud-custodian lambda policy
+      FunctionName: custodian-ebs-delete-marked
+      MemorySize: 512
+      Role: !GetAtt 
+        - CloudCustodian
+        - Arn
+      Runtime: 'python3.8'
+      Handler: main
+      Tags:
+        - Key: Service
+          Value: CloudCustodian
+        - Key: Owner
+          Value: !Ref owner
+      Timeout: 900
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 63596c7d-e1d5-4ea6-9559-a4d166cae8dd
+    DependsOn:
+      - C7NS3BUCKET
+      - C7NSQSQUEUE
+  C7NSQSQUEUE:
+    Type: 'AWS::SQS::Queue'
+    Properties:
+      QueueName: CustodianPolicyNotifications
+      DelaySeconds: 5
+      ReceiveMessageWaitTimeSeconds: 20
+      Tags:
+        - Key: Service
+          Value: CloudCustodian
+        - Key: Owner
+          Value: !Ref owner
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 91564d55-f67d-42c5-b84e-93724deba215
+  C7NS3BUCKET:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      Tags:
+        - Key: Service
+          Value: CloudCustodian
+        - Key: Owner
+          Value: !Ref owner
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: b6b77bcc-68bc-47a9-9d29-59900c1a3807
+  C7NLOGGROUP:
+    Type: 'AWS::Logs::LogGroup'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 41f74a1e-ccbe-4407-888d-4d5a72416fe7
+  C7NLOGSTREAM:
+    Type: 'AWS::Logs::LogStream'
+    Properties:
+      LogGroupName: !Ref C7NLOGGROUP
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 0582cbc5-11c8-45a0-a1ea-fb729928136c
+    DependsOn:
+      - C7NEBSDELETE
+  C7NEBSUNATTACHED:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Code:
+        ZipFile: | 
+          print "Test"
+      Description: cloud-custodian lambda policy
+      FunctionName: custodian-ebs-mark-unattached-deletion
+      MemorySize: 512
+      Role: !GetAtt 
+        - CloudCustodian
+        - Arn
+      Runtime: 'python3.8'
+      Handler: main
+      Tags:
+        - Key: Service
+          Value: CloudCustodian
+        - Key: Owner
+          Value: !Ref owner
+      Timeout: 900
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 2b12ddd5-c0f1-48f2-b910-b46a35eaf265
+    DependsOn:
+      - C7NS3BUCKET
+      - C7NSQSQUEUE
+  C7NEBSATTACHED:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Code:
+        ZipFile: | 
+          print "Test"
+      Description: cloud-custodian lambda policy
+      FunctionName: custodian-ebs-unmark-attached-deletion
+      MemorySize: 512
+      Role: !GetAtt 
+        - CloudCustodian
+        - Arn
+      Runtime: 'python3.8'
+      Handler: main
+      Tags:
+        - Key: Service
+          Value: CloudCustodian
+        - Key: Owner
+          Value: !Ref owner
+      Timeout: 900
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 347c40fb-c3ac-41c7-9519-5686b1be8b11
+    DependsOn:
+      - C7NS3BUCKET
+      - C7NSQSQUEUE
+  C7NMAILER:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Code:
+        ZipFile: | 
+          print "Test"
+      Description: cloud-custodian email notification lambda
+      FunctionName: cloud-custodian-mailer
+      MemorySize: 1024
+      Role: !GetAtt 
+        - CloudCustodian
+        - Arn
+      Runtime: 'python3.7'
+      Handler: main
+      Tags:
+        - Key: Service
+          Value: CloudCustodian
+        - Key: Owner
+          Value: !Ref owner
+      Timeout: 900
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e30d6b77-2b6b-4f08-a860-978263db1268
+    DependsOn:
+      - C7NS3BUCKET
+      - C7NSQSQUEUE
+Parameters:
+  owner:
+    Type: String
+    Description: Service Owner

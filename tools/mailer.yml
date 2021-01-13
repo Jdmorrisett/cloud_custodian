@@ -1,0 +1,6 @@
+queue_url: <C7N_QUEUE>
+role: <C7N_ROLE>
+from_address: <C7N_OWNER>
+region: <C7N_REGION>
+lambda_tags:
+  owner: <C7N_OWNER>
