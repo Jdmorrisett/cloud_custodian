@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Apples",
+    "inventory_id": "1001",
+    "inventory_uuid": "24a635b9-aaaa-bbbb-cccc-2abcdeff1001",
+    "primaryLocation": "westus2",
+    "locations": ["westus2"],
+    "status": "INIT",
+    "dateAdded": "2021-02-22T01:00:00.000",
+    "environment": "prod001"
+  },
+  {
+    "name": "Oranges",
+    "inventory_id": "1002",
+    "inventory_uuid": "11a635b9-dddd-eeee-abab-abcdef0f1002",
+    "primaryLocation": "westus2",
+    "locations": ["westus2"],
+    "status": "INIT",
+    "dateAdded": "2021-02-22T01:00:00.000",
+    "environment": "prod001"
+  }
+]
